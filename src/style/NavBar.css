@@ -1,0 +1,9 @@
+.nav__RouterLink a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__logo {
+  text-decoration: none;
+  color: white !important;
+}

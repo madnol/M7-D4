@@ -1,0 +1,28 @@
+.home__searchBar {
+  display: flex;
+  width: 500px;
+
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  border-top: 1px solid lightgray;
+}
+
+.home__searchBar > form {
+  flex: 1;
+  display: flex;
+}
+
+.home__searchBar > form > input {
+  display: inline-block;
+  flex: 1;
+  outline-width: 0;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+}
+
+.home__searchBar > form button {
+  border: none;
+  display: none;
+}
