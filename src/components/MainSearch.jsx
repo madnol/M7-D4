@@ -48,7 +48,7 @@ function MainSearch(props) {
       setIsLoading(true);
       const response = await fetch(
         // https://cors--anylocation.herokuapp.com/https://jobs.github.com/positions.json?description=${this.state.job}&location=${this.state.location}
-        ` https://cors--anylocation.herokuapp.com/https://jobs.github.com/positions.json?description=${searchInput.job}&location=${searchInput.location}`
+        `https://yabba-dabba-duls-cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=${searchInput.job}&location=${searchInput.location}`
       );
 
       const data = await response.json();

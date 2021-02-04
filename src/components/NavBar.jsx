@@ -30,7 +30,7 @@ class NavBar extends Component {
               Jobs
             </Link>
             <Link className="mx-2 d-flex align-self-center" to="/favourites">
-              Your Favourites
+              Favourites
             </Link>
             <div className="d-flex mx-5 text-end ">
               {/* <p className="font-weight-bold mb-0">Recruiting? | </p>

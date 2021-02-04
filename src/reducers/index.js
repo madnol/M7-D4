@@ -34,7 +34,7 @@ export default function (state = {}, action) {
     case "STORE_SEARCH_RESULTS":
       return {
         ...state,
-        searchResults: action.payload,
+        searchResults: state.searchResults.concat(action.payload),
       };
     case "SET_SELECTED_JOB":
       return {

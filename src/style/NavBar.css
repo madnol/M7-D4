@@ -7,3 +7,6 @@
   text-decoration: none;
   color: white !important;
 }
+.nav__logo:hover {
+  text-decoration: none;
+}
