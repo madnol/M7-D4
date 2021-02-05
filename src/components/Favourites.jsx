@@ -7,7 +7,6 @@ const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
   setSelectedJob: job => dispatch({ type: "SET_SELECTED_JOB", payload: job }),
-  addToFavourites: job => dispatch({ type: "ADD_NEW_FAVOURITE", payload: job }),
   removeFromFavourites: job =>
     dispatch({ type: "REMOVE_FAVOURITE", payload: job }),
 });

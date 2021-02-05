@@ -1,13 +1,10 @@
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-
-import errorReducer from "../reducers/errors";
-import searchResaultReducer from "../reducers/searchResault";
-import selectedJobReducer from "../reducers/selectedJob";
-import userReducer from "../reducers/user";
-
+import rootReducer from "../reducers";
 import thunk from "redux-thunk";
 
 const composedEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+
 
 const initialState = {
   user: {
@@ -24,18 +21,10 @@ const initialState = {
   },
 };
 
-// const bigReducer = combineReducers({ cart: cartReducer, user: userReducer })
-const bigReducer = combineReducers({
-  user: userReducer,
-  searchResults: searchResaultReducer,
-  selectedJob: selectedJobReducer,
-  errors: errorReducer,
-});
-
 export default function configureStore() {
   return createStore(
-    bigReducer,
+    rootReducer,
     initialState,
-    composedEnhancer(applyMiddleware(thunk))
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
 }

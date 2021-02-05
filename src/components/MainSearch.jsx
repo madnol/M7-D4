@@ -119,9 +119,11 @@ function MainSearch(props) {
         )}
         <Row>
           {props.searchResults.length > 0 &&
-            props.searchResults.map((result, index) => (
-              <SearchResult key={index} data={result} />
-            ))}
+            props.searchResults
+              .slice(0, 10)
+              .map((result, index) => (
+                <SearchResult key={index} data={result} />
+              ))}
         </Row>
       </div>
     </Container>
